@@ -35,11 +35,12 @@
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.label2 = new System.Windows.Forms.Label();
             this.procentLabel = new System.Windows.Forms.Label();
+            this.findButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // downloadButton
             // 
-            this.downloadButton.Location = new System.Drawing.Point(311, 157);
+            this.downloadButton.Location = new System.Drawing.Point(311, 193);
             this.downloadButton.Name = "downloadButton";
             this.downloadButton.Size = new System.Drawing.Size(75, 23);
             this.downloadButton.TabIndex = 0;
@@ -66,10 +67,6 @@
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Items.AddRange(new object[] {
-            "144\t",
-            "480",
-            "720"});
             this.comboBox.Location = new System.Drawing.Point(254, 72);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(132, 21);
@@ -77,7 +74,7 @@
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(122, 118);
+            this.progressBar.Location = new System.Drawing.Point(122, 153);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(264, 23);
             this.progressBar.TabIndex = 4;
@@ -94,17 +91,28 @@
             // procentLabel
             // 
             this.procentLabel.AutoSize = true;
-            this.procentLabel.Location = new System.Drawing.Point(410, 128);
+            this.procentLabel.Location = new System.Drawing.Point(401, 163);
             this.procentLabel.Name = "procentLabel";
             this.procentLabel.Size = new System.Drawing.Size(21, 13);
             this.procentLabel.TabIndex = 6;
             this.procentLabel.Text = "0%";
+            // 
+            // findButton
+            // 
+            this.findButton.Location = new System.Drawing.Point(311, 109);
+            this.findButton.Name = "findButton";
+            this.findButton.Size = new System.Drawing.Size(75, 23);
+            this.findButton.TabIndex = 7;
+            this.findButton.Text = "Find";
+            this.findButton.UseVisualStyleBackColor = true;
+            this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
             // DownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 319);
+            this.Controls.Add(this.findButton);
             this.Controls.Add(this.procentLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.progressBar);
@@ -129,5 +137,6 @@
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label procentLabel;
+        private System.Windows.Forms.Button findButton;
     }
 }

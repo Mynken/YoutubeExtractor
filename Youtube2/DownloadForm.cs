@@ -19,8 +19,33 @@ namespace Youtube2
         {
             InitializeComponent();
             procentLabel.Hide();
+            downloadButton.Hide();
+            progressBar.Hide();
+            label2.Hide();
+            comboBox.Hide();
         }
-
+        private void findButton_Click(object sender, EventArgs e)
+        {
+            IEnumerable<VideoInfo> videos = DownloadUrlResolver.GetDownloadUrls(textBox.Text);
+            List<int> resolution = new List<int>();
+            foreach (var item in videos)
+            {
+                if (item.Resolution != 0 && !resolution.Contains(item.Resolution))
+                {
+                    resolution.Add(item.Resolution);
+                }
+            }
+            resolution.Sort();
+            foreach (var item in resolution)
+            {
+                comboBox.Items.Add(item);
+            }
+            findButton.Hide();
+            downloadButton.Show();
+            progressBar.Show();
+            label2.Show();
+            comboBox.Show();
+        }
         private void downloadButton_Click(object sender, EventArgs e)
         {
             progressBar.Minimum = 0;
@@ -76,7 +101,9 @@ namespace Youtube2
 
         private void DownloadForm_Load(object sender, EventArgs e)
         {
-            comboBox.SelectedIndex = 0;
+          //  comboBox.SelectedIndex = 0;
         }
+
+       
     }
 }
