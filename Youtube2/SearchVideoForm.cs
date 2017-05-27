@@ -14,19 +14,19 @@ using YoutubeSearch;
 
 namespace Youtube2
 {
-    public partial class Form1 : Form
+    public partial class SeachVideoFrom : Form
     {
-        public Form1()
+        public SeachVideoFrom()
         {
             InitializeComponent();
-            dataGridView1.RowTemplate.Height = 110;
-            dataGridView1.Visible = false;
+            dataGridView.RowTemplate.Height = 110;
+            dataGridView.Visible = false;
         }
         private void button1_Click(object sender, EventArgs e)
         {
             VideoSearch items = new VideoSearch();
             List<Video> list = new List<Video>();
-            foreach (var item in items.SearchQuery(textBox1.Text, 1))
+            foreach (var item in items.SearchQuery(searchTextBox.Text, 1))
             {
                 Video video = new Video();
                 video.Title = item.Title;
@@ -40,25 +40,23 @@ namespace Youtube2
                 list.Add(video);
             }
             videoBindingSource.DataSource = list;
-            dataGridView1.Visible = true;
+            dataGridView.Visible = true;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                IEnumerable<VideoInfo> videos = DownloadUrlResolver.GetDownloadUrls(dataGridView1.SelectedCells.ToString());
-                VideoInfo video = videos.First(p => p.VideoType == VideoType.Mp4 && p.Resolution == Convert.ToInt32(comboBox1.Text));
 
-                if (video.RequiresDecryption)
-                    DownloadUrlResolver.DecryptDownloadUrl(video);
-                VideoDownloader downloader = new VideoDownloader(video, Path.Combine(@"C:\Users\Waldes\Desktop\", video.Title + video.VideoExtension));
-            }
-            catch (Exception)
-            {
+        }
 
-                MessageBox.Show("Отказано в доступе");
-            }
+        private void SeachVideoFrom_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            DownloadForm download = new DownloadForm();
+            download.Show();
         }
     }
 }

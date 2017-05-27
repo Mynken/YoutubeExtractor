@@ -2,7 +2,6 @@ c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\bin\Debu
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\bin\Debug\Youtube2.exe
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\bin\Debug\Youtube2.pdb
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.csprojResolveAssemblyReference.cache
-c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.Form1.resources
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.Properties.Resources.resources
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.csproj.GenerateResource.Cache
 c:\users\waldes\documents\visual studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.exe
@@ -12,3 +11,5 @@ C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debu
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\YoutubeExtractor.dll
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\YoutubeExtractor.xml
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.DownloadForm.resources
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.SeachVideoFrom.resources
