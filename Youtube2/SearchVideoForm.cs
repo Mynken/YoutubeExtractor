@@ -58,7 +58,7 @@ namespace Youtube2
                 Data.Path = "D:\\Downloads";
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void linkButton_Click(object sender, EventArgs e)
         {
             DownloadForm download = new DownloadForm();
             download.Show();
@@ -70,6 +70,12 @@ namespace Youtube2
             {
                 Data.Path = folderBrowserDialog1.SelectedPath.ToString();
             }
+        }
+
+        private void audioButton_Click(object sender, EventArgs e)
+        {
+            MusicForm music = new MusicForm();
+            music.Show();
         }
     }
 }

@@ -37,6 +37,7 @@
             this.procentLabel = new System.Windows.Forms.Label();
             this.findButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // downloadButton
@@ -68,7 +69,7 @@
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(254, 72);
+            this.comboBox.Location = new System.Drawing.Point(254, 111);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(132, 21);
             this.comboBox.TabIndex = 3;
@@ -83,7 +84,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 75);
+            this.label2.Location = new System.Drawing.Point(30, 119);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 5;
@@ -100,7 +101,7 @@
             // 
             // findButton
             // 
-            this.findButton.Location = new System.Drawing.Point(311, 109);
+            this.findButton.Location = new System.Drawing.Point(311, 70);
             this.findButton.Name = "findButton";
             this.findButton.Size = new System.Drawing.Size(75, 23);
             this.findButton.TabIndex = 7;
@@ -108,11 +109,21 @@
             this.findButton.UseVisualStyleBackColor = true;
             this.findButton.Click += new System.EventHandler(this.findButton_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(206, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Please wait";
+            // 
             // DownloadForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(446, 319);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.procentLabel);
             this.Controls.Add(this.label2);
@@ -140,5 +151,6 @@
         private System.Windows.Forms.Label procentLabel;
         private System.Windows.Forms.Button findButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
+        private System.Windows.Forms.Label label3;
     }
 }

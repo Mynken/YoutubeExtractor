@@ -37,11 +37,14 @@
             this.authorDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urlDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.videoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.button1 = new System.Windows.Forms.Button();
+            this.linkButton = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.changeDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.audioButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.videoBindingSource)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -50,9 +53,9 @@
             // searchButton
             // 
             this.searchButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.searchButton.Location = new System.Drawing.Point(577, 20);
+            this.searchButton.Location = new System.Drawing.Point(566, 27);
             this.searchButton.Name = "searchButton";
-            this.searchButton.Size = new System.Drawing.Size(75, 23);
+            this.searchButton.Size = new System.Drawing.Size(109, 23);
             this.searchButton.TabIndex = 1;
             this.searchButton.Text = "Find";
             this.searchButton.UseVisualStyleBackColor = true;
@@ -60,9 +63,9 @@
             // 
             // searchTextBox
             // 
-            this.searchTextBox.Location = new System.Drawing.Point(12, 22);
+            this.searchTextBox.Location = new System.Drawing.Point(12, 27);
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Size = new System.Drawing.Size(313, 20);
+            this.searchTextBox.Size = new System.Drawing.Size(446, 20);
             this.searchTextBox.TabIndex = 2;
             // 
             // dataGridView
@@ -77,10 +80,10 @@
             this.authorDataGridViewTextBoxColumn,
             this.urlDataGridViewTextBoxColumn});
             this.dataGridView.DataSource = this.videoBindingSource;
-            this.dataGridView.Location = new System.Drawing.Point(12, 51);
+            this.dataGridView.Location = new System.Drawing.Point(12, 53);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.ReadOnly = true;
-            this.dataGridView.Size = new System.Drawing.Size(527, 336);
+            this.dataGridView.Size = new System.Drawing.Size(446, 336);
             this.dataGridView.TabIndex = 3;
             this.dataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -116,15 +119,15 @@
             // 
             this.videoBindingSource.DataSource = typeof(Youtube2.Video);
             // 
-            // button1
+            // linkButton
             // 
-            this.button1.Location = new System.Drawing.Point(556, 415);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            this.linkButton.Location = new System.Drawing.Point(566, 394);
+            this.linkButton.Name = "linkButton";
+            this.linkButton.Size = new System.Drawing.Size(109, 23);
+            this.linkButton.TabIndex = 5;
+            this.linkButton.Text = "Download link";
+            this.linkButton.UseVisualStyleBackColor = true;
+            this.linkButton.Click += new System.EventHandler(this.linkButton_Click);
             // 
             // menuStrip1
             // 
@@ -151,12 +154,43 @@
             this.changeDirectoryToolStripMenuItem.Text = "Change directory";
             this.changeDirectoryToolStripMenuItem.Click += new System.EventHandler(this.changeDirectoryToolStripMenuItem_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(299, 404);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(249, 13);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "If you have already link to a video please click here";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(299, 432);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(237, 13);
+            this.label2.TabIndex = 10;
+            this.label2.Text = "If you want to download music okease click here";
+            // 
+            // audioButton
+            // 
+            this.audioButton.Location = new System.Drawing.Point(566, 427);
+            this.audioButton.Name = "audioButton";
+            this.audioButton.Size = new System.Drawing.Size(109, 23);
+            this.audioButton.TabIndex = 11;
+            this.audioButton.Text = "Download music";
+            this.audioButton.UseVisualStyleBackColor = true;
+            this.audioButton.Click += new System.EventHandler(this.audioButton_Click);
+            // 
             // SeachVideoFrom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 470);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.audioButton);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkButton);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.searchTextBox);
             this.Controls.Add(this.searchButton);
@@ -183,11 +217,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn titleDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn authorDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn urlDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button linkButton;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem changeDirectoryToolStripMenuItem;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button audioButton;
     }
 }
 

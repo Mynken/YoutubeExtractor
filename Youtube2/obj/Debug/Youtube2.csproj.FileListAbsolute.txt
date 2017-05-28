@@ -13,3 +13,4 @@ C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debu
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\YoutubeExtractor.xml
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.DownloadForm.resources
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.SeachVideoFrom.resources
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.MusicForm.resources

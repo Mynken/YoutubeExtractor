@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -31,9 +32,11 @@ namespace Youtube2
             progressBar.Hide();
             label2.Hide();
             comboBox.Hide();
+            label3.Hide();
         }
         private void findButton_Click(object sender, EventArgs e)
         {
+            label3.Show();
             IEnumerable<VideoInfo> videos = DownloadUrlResolver.GetDownloadUrls(textBox.Text);
             List<int> resolution = new List<int>();
             foreach (var item in videos)
@@ -49,6 +52,7 @@ namespace Youtube2
                 comboBox.Items.Add(item);
             }
             findButton.Hide();
+            label3.Hide();
             downloadButton.Show();
             progressBar.Show();
             label2.Show();
@@ -69,11 +73,28 @@ namespace Youtube2
             if (video.RequiresDecryption)
                 DownloadUrlResolver.DecryptDownloadUrl(video);
             var videoDownloader = new VideoDownloader(video, Path.Combine(Data.Path, video.Title + video.VideoExtension));
-
-            videoDownloader.DownloadProgressChanged += Downloader_DownloadProgressChanged;
-            videoDownloader.DownloadFinished += Downloader_DownloadFinished;
-            Thread thread = new Thread(() => { videoDownloader.Execute(); }) { IsBackground = true };
-            thread.Start();
+                videoDownloader.DownloadProgressChanged += Downloader_DownloadProgressChanged;
+                videoDownloader.DownloadFinished += Downloader_DownloadFinished;
+                try
+                {
+                    Thread thread = new Thread(() => { videoDownloader.Execute(); }) { IsBackground = true };
+                    thread.Start();
+                }
+                catch (WebException ex)
+                {
+                if (ex.Status == WebExceptionStatus.ProtocolError)
+                {
+                    var response = ex.Response as HttpWebResponse;
+                    if (response != null)
+                    {
+                        MessageBox.Show("HTTP Status Code: " + (int)response.StatusCode);
+                    }
+                    else
+                    {
+                        MessageBox.Show("error");
+                    }
+                }
+            }
         }
 
         private void Downloader_DownloadFinished(object sender, EventArgs e)
