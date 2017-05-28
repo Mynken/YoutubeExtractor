@@ -36,6 +36,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.procentLabel = new System.Windows.Forms.Label();
             this.findButton = new System.Windows.Forms.Button();
+            this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.SuspendLayout();
             // 
             // downloadButton
@@ -138,5 +139,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label procentLabel;
         private System.Windows.Forms.Button findButton;
+        private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
     }
 }

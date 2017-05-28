@@ -45,18 +45,31 @@ namespace Youtube2
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            if (e.RowIndex >= 0)
+            {
+                Data.Url = dataGridView.Rows[e.RowIndex].Cells[3].Value.ToString();
+                DownloadForm download = new DownloadForm();
+                download.Show();
+            }
         }
 
         private void SeachVideoFrom_Load(object sender, EventArgs e)
         {
-
+                Data.Path = "D:\\Downloads";
         }
 
         private void button1_Click_1(object sender, EventArgs e)
         {
             DownloadForm download = new DownloadForm();
             download.Show();
+        }
+
+        private void changeDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Data.Path = folderBrowserDialog1.SelectedPath.ToString();
+            }
         }
     }
 }

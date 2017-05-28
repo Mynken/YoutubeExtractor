@@ -18,6 +18,14 @@ namespace Youtube2
         public DownloadForm()
         {
             InitializeComponent();
+            if (Data.Url == string.Empty)
+            {
+
+            }
+            else
+            {
+                textBox.Text = Data.Url;
+            }
             procentLabel.Hide();
             downloadButton.Hide();
             progressBar.Hide();
@@ -48,6 +56,10 @@ namespace Youtube2
         }
         private void downloadButton_Click(object sender, EventArgs e)
         {
+            if (folderBrowserDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Data.Path = folderBrowserDialog1.SelectedPath.ToString();
+            }
             progressBar.Minimum = 0;
             progressBar.Maximum = 100;
             procentLabel.Show();
@@ -56,7 +68,7 @@ namespace Youtube2
 
             if (video.RequiresDecryption)
                 DownloadUrlResolver.DecryptDownloadUrl(video);
-            var videoDownloader = new VideoDownloader(video, Path.Combine("D:/Downloads", video.Title + video.VideoExtension));
+            var videoDownloader = new VideoDownloader(video, Path.Combine(Data.Path, video.Title + video.VideoExtension));
 
             videoDownloader.DownloadProgressChanged += Downloader_DownloadProgressChanged;
             videoDownloader.DownloadFinished += Downloader_DownloadFinished;
@@ -104,6 +116,6 @@ namespace Youtube2
           //  comboBox.SelectedIndex = 0;
         }
 
-       
+
     }
 }
