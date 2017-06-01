@@ -18,6 +18,11 @@ namespace Youtube2
         public MusicForm()
         {
             InitializeComponent();
+            MessageBox.Show("Sorry but this add isn`t supported now, now you can only watch video here");
+            button1.Hide();
+            progressBar1.Hide();
+            textBox1.Hide();
+            label1.Hide();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,5 +90,17 @@ namespace Youtube2
                 progressBar1.Update();
             }));
         }
+
+        private void watchButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog file = new OpenFileDialog();
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+               // textBox1.Text = file.FileName;
+                axWindowsMediaPlayer1.URL = file.FileName;
+                axWindowsMediaPlayer1.Ctlcontrols.play();
+            }
+        }
+           
     }
 }

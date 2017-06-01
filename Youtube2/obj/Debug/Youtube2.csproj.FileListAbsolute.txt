@@ -14,3 +14,8 @@ C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debu
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.DownloadForm.resources
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.SeachVideoFrom.resources
 C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.MusicForm.resources
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\Interop.WMPLib.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Interop.WMPLib.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Waldes\Documents\Visual Studio 2017\Projects\Youtube2\Youtube2\obj\Debug\Youtube2.csproj.ResolveComReference.cache

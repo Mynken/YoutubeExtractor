@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DownloadForm));
             this.downloadButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             // 
             // downloadButton
             // 
-            this.downloadButton.Location = new System.Drawing.Point(311, 193);
+            this.downloadButton.Location = new System.Drawing.Point(311, 213);
             this.downloadButton.Name = "downloadButton";
             this.downloadButton.Size = new System.Drawing.Size(75, 23);
             this.downloadButton.TabIndex = 0;
@@ -69,14 +70,14 @@
             // comboBox
             // 
             this.comboBox.FormattingEnabled = true;
-            this.comboBox.Location = new System.Drawing.Point(254, 111);
+            this.comboBox.Location = new System.Drawing.Point(254, 116);
             this.comboBox.Name = "comboBox";
             this.comboBox.Size = new System.Drawing.Size(132, 21);
             this.comboBox.TabIndex = 3;
             // 
             // progressBar
             // 
-            this.progressBar.Location = new System.Drawing.Point(122, 153);
+            this.progressBar.Location = new System.Drawing.Point(82, 172);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(264, 23);
             this.progressBar.TabIndex = 4;
@@ -84,7 +85,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 119);
+            this.label2.Location = new System.Drawing.Point(156, 124);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 13);
             this.label2.TabIndex = 5;
@@ -93,7 +94,7 @@
             // procentLabel
             // 
             this.procentLabel.AutoSize = true;
-            this.procentLabel.Location = new System.Drawing.Point(401, 163);
+            this.procentLabel.Location = new System.Drawing.Point(365, 182);
             this.procentLabel.Name = "procentLabel";
             this.procentLabel.Size = new System.Drawing.Size(21, 13);
             this.procentLabel.TabIndex = 6;
@@ -122,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(446, 319);
+            this.ClientSize = new System.Drawing.Size(531, 429);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.findButton);
             this.Controls.Add(this.procentLabel);
@@ -132,6 +133,7 @@
             this.Controls.Add(this.textBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.downloadButton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "DownloadForm";
             this.Text = "DownloadForm";
             this.Load += new System.EventHandler(this.DownloadForm_Load);
